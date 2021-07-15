@@ -1,1 +1,43 @@
-<p>quotes works!</p>
+<div class="container-fluid">
+    <div class="briefsummary">
+        <h1>
+            Brief Summary
+        </h1>
+        <hr>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit pariatur perspiciatis quisquam dolor veritatis? Id, perferendis! Odio eligendi incidunt 
+            officia accusamus, ex aspernatur similique minus repellat doloribus, consectetur amet vero!
+        </p>
+    </div>
+    <div class="quotes-content">
+        <h4>
+            Qoutes Available
+        </h4>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste, quaerat quasi et sunt eaque enim magnam harum, sed cupiditate a delectus
+            illum maiores unde amet, vel ipsa exercitationem tempora ducimus.
+        </p>
+        <div class="quotes-cards">
+            <div class="row" id="quotes-cards">
+                <div class="col" *ngFor='let quote of quotes; let i = index'>
+                    <div class="card" style="width: 18rem;">
+                        <div class="card-body" (mouseenter) = "mouseHovering(i)" (mouseleave) = "mouseLeft(i)">
+                          <h5 class="card-title">Card title</h5>
+                          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+                          <p class="card-text">
+                              {{quote.author}} and {{quote.votes}}
+                          </p>
+                          <!-- Add buttons here -->
+                          <app-quotes-buttons *ngIf = "quote.isHidden" [showHideButtons] = 'quote' (positiveVote) = 'plusOne($event,i)' (negativeVote) = 'minusOne($event,i)' (deleteQuote) = 'removeQuote($event,1)'>
+
+                          </app-quotes-buttons>
+                          <div class="quote-buttons" >
+                              
+                          </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
