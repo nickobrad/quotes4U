@@ -1,0 +1,12 @@
+.quotes-cards{
+    background-color: blueviolet;
+}
+.col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0px;
+}
+.card-body{
+    margin:5px 0px;
+}
