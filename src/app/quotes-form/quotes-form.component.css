@@ -1,4 +1,14 @@
 .container-fluid{
     width:60%;
-    
+}
+.heading{
+    text-align: center;
+    padding: 5px 0px;
+}
+#form-input{
+    display: flex;
+    flex-direction: column;
+}
+.bt1{
+    background-color: aqua;
 }
