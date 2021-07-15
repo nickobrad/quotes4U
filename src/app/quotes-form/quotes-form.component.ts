@@ -11,7 +11,7 @@ import { QuotesTemplate } from '../quotes-template'
 export class QuotesFormComponent implements OnInit {
 
   @Output() addQuote = new EventEmitter<QuotesTemplate>();
-  newQuote = new QuotesTemplate(0, "", "", new Date(), 0, 0);
+  newQuote = new QuotesTemplate (0, "","", new Date(), 0, 0);
 
   submitQuote(){
     this.addQuote.emit(this.newQuote);
