@@ -1,11 +1,7 @@
 export class QuotesTemplate {
     isHidden!: boolean;
-    constructor(public id:number, public author:string, public votes:number){
+    constructor(public id:number, public author:string, public typedQuote:string, public postDate:Date, public likes:number, public dislikes:number){
         this.isHidden = false;    
     }
 }
 
-// showDescription:boolean;
-//     constructor(public id:number, public nameOfGoal:string, public description:string, public completeDate:Date){
-//         this.showDescription = false;
-//     }

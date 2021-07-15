@@ -2,7 +2,7 @@
     <h4>
         Thinking of adding a quote?
     </h4>
-    <form >
+    <form #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote()'>
         <div class="quotes-form-input">
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="authorInput" placeholder="Author">

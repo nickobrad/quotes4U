@@ -25,19 +25,19 @@
                           <h5 class="card-title">Card title</h5>
                           <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
                           <p class="card-text">
-                              {{quote.author}} and {{quote.votes}}
+                              {{quote.author}}
                           </p>
-                          <!-- Add buttons here -->
+                          <p style="text-align: center;">
+                            Likes: {{quote.likes}} | Dislikes: {{quote.dislikes}}
+                          </p>
                           <app-quotes-buttons *ngIf = "quote.isHidden" [showHideButtons] = 'quote' (positiveVote) = 'plusOne($event,i)' (negativeVote) = 'minusOne($event,i)' (deleteQuote) = 'removeQuote($event,1)'>
 
                           </app-quotes-buttons>
-                          <div class="quote-buttons" >
-                              
-                          </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <app-quotes-form (addQuote) = 'addNewQuote($event)'></app-quotes-form>
 </div>

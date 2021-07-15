@@ -8,6 +8,7 @@ import { HomeLPComponent } from './home-lp/home-lp.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 import { QuotesButtonsComponent } from './quotes-buttons/quotes-buttons.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { QuotesButtonsComponent } from './quotes-buttons/quotes-buttons.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
