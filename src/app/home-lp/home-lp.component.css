@@ -1,0 +1,28 @@
+.container-fluid{
+    background-color: aqua;
+    height:30em;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.welcome{
+    background-color: blue;
+    position: absolute;
+    left: 2.5%;
+    top: 10%;
+}
+.content{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.lookmore{
+    background-color: brown;
+    position: absolute;
+    right:2.5%;
+    bottom: 10%;
+    text-align: center;
+
+}
