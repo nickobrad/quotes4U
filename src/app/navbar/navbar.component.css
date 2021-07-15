@@ -1,0 +1,9 @@
+nav{
+    background-color:darkslategray;
+}
+.navbar-brand{
+    padding-left: 30px;
+}
+#navbarNav{
+    padding-right: 50px;
+}
