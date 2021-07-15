@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { globalAgent } from 'http';
 import { QuotesTemplate } from '../quotes-template'
 
 @Component({
@@ -17,12 +16,12 @@ export class QuotesComponent implements OnInit {
   }
 
   quotes: QuotesTemplate[] = [
-    new QuotesTemplate(1, 'Watch finding Nemo', '', new Date(), 0, 0),
-    new QuotesTemplate(2, 'Watch finding Nemo', '', new Date(), 0, 0),
-    new QuotesTemplate(3, 'Watch finding Nemo', '', new Date(), 0, 0),
-    new QuotesTemplate(4, 'Watch finding Nemo', '', new Date(), 0, 0),
-    new QuotesTemplate(5, 'Watch finding Nemo', '', new Date(), 0, 0),
-    new QuotesTemplate(6, 'Watch finding Nemo', '', new Date(), 0, 0),
+    new QuotesTemplate(1, 'Jay-Z', 'I had Benzes before you had braces, the all white maybach but I am not a racist', new Date(2021,3,14), 12, 13),
+    new QuotesTemplate(2, 'Drake', 'How did a pound of kush become a fountain of youth? How did a bottle of wine become a fountain of youth?', new Date(2020,6,9), 4, 90),
+    new QuotesTemplate(3, 'Kanye West', 'I do not know what is be', new Date(2019,1,15), 24, 8),
+    new QuotesTemplate(4, 'Big Sean', 'Are you willing to give up what you love for who you love?', new Date(2018,4,20), 15, 15),
+    new QuotesTemplate(5, 'Childish Gambino', 'No  matter what you say and what you do, when I am alone I would rather be with you. I will be right by your side till 3005', new Date(2017,8,30), 69, 62),
+    new QuotesTemplate(6, 'Lil Wayne', 'Did not wear a bullet proof so I got shot and you can see the proof. Blind eyes could look at me and see the truth, wonder if Stevie do.', new Date(2016,11,5), 78, 20),
   ];
 
   plusOne(positiveVote:boolean, index:number){
