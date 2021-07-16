@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeLPComponent implements OnInit {
 
+  myImage:string = "../assets/bg1.jpg";
+
+
   constructor() { }
 
   ngOnInit(): void {

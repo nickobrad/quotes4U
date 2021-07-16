@@ -7,3 +7,6 @@ nav{
 #navbarNav{
     padding-right: 50px;
 }
+.container-fluid a{
+    color: beige;
+}

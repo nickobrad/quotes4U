@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="briefsummary">
-        <h1>
+        <h1 style="text-align: center;">
             Brief Summary
         </h1>
         <hr>
@@ -10,7 +10,7 @@
         </p>
     </div>
     <div class="quotes-content">
-        <h4>
+        <h4 style="text-align: center;">
             Qoutes Available
         </h4>
         <p>
@@ -30,7 +30,7 @@
                           <p style="text-align: center;">
                             Likes: {{quote.likes}} | Dislikes: {{quote.dislikes}}
                           </p>
-                          <app-quotes-buttons *ngIf = "quote.isHidden" [showHideButtons] = 'quote' (positiveVote) = 'plusOne($event,i)' (negativeVote) = 'minusOne($event,i)' (deleteQuote) = 'removeQuote($event,1)'>
+                          <app-quotes-buttons *ngIf = "quote.isHidden" [showHideButtons] = 'quote' (positiveVote) = 'plusOne($event,i)' (negativeVote) = 'minusOne($event,i)' (deleteQuote) = 'removeQuote($event,i)'>
 
                           </app-quotes-buttons>
                         </div>
