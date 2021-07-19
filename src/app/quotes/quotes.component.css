@@ -10,3 +10,9 @@
 .card-body{
     margin:5px 0px;
 }
+.card{
+    background-color: #9b8991;
+}
+.container-fluid{
+    background-color: #f4f4f0;
+}

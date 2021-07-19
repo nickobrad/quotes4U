@@ -3,18 +3,27 @@
         Thinking of adding a quote?
     </h4>
         <div class="quotes-form-input">
-            <form id="form-input" #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote()'>
+            <form id="form-input" #quoteForm = 'ngForm' (ngSubmit) = 'submitQuote(quoteForm); quoteForm.resetForm({})'>
                 <div class="form-group form-floating mb-3">
-                    <input type="text" class="form-control" id="authorInput" placeholder="Author" [(ngModel)] = "newQuote.author" name="authorInput" #name='ngModel' required>
+                    <input type="text" class="form-control" id="authorInput" placeholder="Author" [(ngModel)] = "newQuote.author" name="authorInput" #authorInput='ngModel' required>
                     <label for="floatingInput">Author:</label>
+                    <div [hidden]="authorInput.valid || authorInput.pristine" class="alert alert-danger">
+                        <p>Author is required</p>
+                    </div>
                 </div>
                 <div class="form-group form-floating mb-3">
-                    <textarea class="form-control" placeholder="Leave your quote here" id="quoteInput" style="height: 100px" [(ngModel)] = "newQuote.typedQuote" name="quoteInput" #name='ngModel' required></textarea>
+                    <textarea class="form-control" placeholder="Leave your quote here" id="quoteInput" style="height: 100px" [(ngModel)] = "newQuote.typedQuote" name="quoteInput" #quoteInput='ngModel' required></textarea>
                     <label for="floatingTextarea2">Your quote here:</label>
+                    <div [hidden]="quoteInput.valid || quoteInput.pristine" class="alert alert-danger">
+                        <p>The quote is required</p>
+                    </div>
                 </div>
                 <div class="form-group form-floating mb-3">
-                    <input type="date" class="form-control" id="dateInput" placeholder="Date Published" [(ngModel)] = "newQuote.postDate" name="dateInput" #name='ngModel' required>
+                    <input type="date" class="form-control" id="dateInput" placeholder="Date Published" [(ngModel)] = "newQuote.postDate" name="dateInput" #dateInput='ngModel' required>
                     <label for="floatingInput">Date Published:</label>
+                    <div [hidden]="dateInput.valid || dateInput.pristine" class="alert alert-danger">
+                        <p>Description is required</p>
+                    </div>
                 </div>
                 <div class="btn1">
                     <button type="submit" class="btn btn-outline-secondary">Publish Quote</button>

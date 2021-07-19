@@ -12,6 +12,7 @@ export class QuotesButtonsComponent implements OnInit {
   @Output() positiveVote = new EventEmitter <boolean>();
   @Output() negativeVote = new EventEmitter <boolean>();
   @Output() deleteQuote = new EventEmitter <boolean>();
+  @Output() highlightVote = new EventEmitter <boolean>();
 
   incrementUp(positive:boolean){
     this.positiveVote.emit(positive);
@@ -23,6 +24,10 @@ export class QuotesButtonsComponent implements OnInit {
 
   quoteDeletion(remove:boolean){
     this.deleteQuote.emit(remove);
+  }
+
+  maxVote(highest:boolean){
+    this.highlightVote.emit(highest);
   }
 
   constructor() { }

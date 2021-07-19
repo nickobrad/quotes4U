@@ -1,5 +1,9 @@
 .container-fluid{
-    width:60%;
+    background-color: #d39a6d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 .heading{
     text-align: center;
@@ -8,7 +12,12 @@
 #form-input{
     display: flex;
     flex-direction: column;
+    width: 100%;
+    align-items: center;
 }
-.bt1{
-    background-color: aqua;
+.quotes-form-input{
+    width: 60%;
+}
+.form-group{
+    width: 70%;
 }

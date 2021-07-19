@@ -19,18 +19,18 @@
         </p>
         <div class="quotes-cards">
             <div class="row" id="quotes-cards">
-                <div class="col" *ngFor='let quote of quotes; let i = index'>
-                    <div class="card" style="width: 18rem; height: max-content">
+                <div class="col" *ngFor='let quote of quotes; let i = index' [ngClass] = "{ 'popular-quote': quote.status }">
+                    <div class="card"  style="width: 18rem; height: max-content">
                         <div class="card-body" (mouseenter) = "mouseHovering(i)" (mouseleave) = "mouseLeft(i)">
                           <h5 class="card-title">{{quote.author}}</h5>
-                          <h6 class="card-subtitle mb-2 text-muted">{{ quote.postDate| date }} posted {{ quote.postDate|dateCount }} days ago.</h6>
+                          <h6 class="card-subtitle mb-2 text-muted">{{ quote.postDate| date }} posted {{ quote.postDate|dateCount }}</h6>
                           <p>
                               {{quote.typedQuote}}
                           </p>
                           <p style="text-align: center;">
                             Likes: {{quote.likes}} | Dislikes: {{quote.dislikes}}
                           </p>
-                          <app-quotes-buttons *ngIf = "quote.isHidden" [showHideButtons] = 'quote' (positiveVote) = 'plusOne($event,i)' (negativeVote) = 'minusOne($event,i)' (deleteQuote) = 'removeQuote($event,i)'>
+                          <app-quotes-buttons *ngIf = "quote.isHidden" [showHideButtons] = 'quote'  (highlightVote) = 'favouritesQuote($event)' (positiveVote) = 'plusOne($event,i)' (negativeVote) = 'minusOne($event,i)' (deleteQuote) = 'removeQuote($event,i)'>
 
                           </app-quotes-buttons>
                         </div>
@@ -39,5 +39,6 @@
             </div>
         </div>
     </div>
-    <app-quotes-form (addQuote) = 'addNewQuote($event)'></app-quotes-form>
 </div>
+<app-quotes-form (addQuote) = 'addNewQuote($event)'></app-quotes-form>
+
